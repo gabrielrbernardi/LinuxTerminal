@@ -7,7 +7,10 @@
 #include <unistd.h>                                                                   // Biblioteca para receber hostname
 #include <time.h>                                                                     // Biblioteca para comandos usando time
 
-#define clear() printf("\033[H\033[J")
+
+void clear(){
+    printf("\033[H\033[J");
+}
 
 void limpa(){
     setbuf(stdin, NULL);
