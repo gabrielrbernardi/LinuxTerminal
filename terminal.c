@@ -35,12 +35,12 @@ int main(){
         if(strcmp(command, "help") == 0){
             printf("DevTerminal, version 0.1\nDeveloped by Gabriel Bernardi\n");
         }
-        else if(strcmp(command, "cls") == 0){                                         // Limpa tela                  
+        else if(strcmp(command, "cls") == 0 || strcmp(command, "clear") == 0){                                         // Limpa tela                  
             clear();
         }
-        else if(strcmp(command, "dir") == 0){                                         // Lista diretorios, similar ao ls
+        else if(strcmp(command, "dir") == 0 || strcmp(command, "ls") == 0){                                         // Lista diretorios, similar ao ls
             struct dirent *de;
-            DIR *dr = opendir(".");
+            DIR *dr = opendir(currentPath);
             if (dr == NULL){
                 printf("Nao foi possivel abrir o diretorio\n");
                 break;
