@@ -24,7 +24,7 @@ int main(){
 
 
     while(1){
-        char *currentPath = getenv("HOME");
+        char *currentPath = getenv("PWD");
         printf("%s@%s:%s$ ", user, hostname, currentPath);
         scanf("%[^\n]", command);                                                     // Ler comando do teclado
         limpa();
